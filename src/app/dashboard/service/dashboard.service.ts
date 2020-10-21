@@ -15,7 +15,7 @@ export class DashboardService {
 
 
   getLaunches(filters) {
-    let url = `${this.baseUrl}/launches?limit=100`;
+    let url = `${this.baseUrl}/launches?limit=10`;
 
     url = `${url}${Object.keys(filters).reduce((a,filter)=> `${a}&${filter}=${filters[filter]}` ,"")}`
 

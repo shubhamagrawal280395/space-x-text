@@ -1,6 +1,10 @@
 # SpacexLaunch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+This project is hosted on heroku https://psspacextest.herokuapp.com
+
+# Lighthouse Report
+
+https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fpsspacextest.herokuapp.com%2F
 
 # App Overview
 
