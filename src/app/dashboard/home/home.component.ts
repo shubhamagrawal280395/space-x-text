@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParamMap.subscribe((params) => {
-      this.filters = params.keys.reduce((filters, k) => (filters[k] = params.get(k),filters), {})
+      this.filters = params.keys.reduce((filters, k) => (filters[k] = params.get(k),filters), {limit:10})
       this.getLaunches();
     });
   }

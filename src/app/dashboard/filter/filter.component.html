@@ -1,6 +1,14 @@
 <div class="card">
   <div class="card-body p-3">
     <h2>Filters</h2>
+    <h3 class="subtitle">Limit Launches</h3>
+    <div class="d-flex justify-content-between flex-wrap btn-wrapper">
+      <button *ngFor="let limit of limits" class="btn btn-sm btn-success non-filter" [ngClass]="{
+        'applied-filter': limit.value == filters.limit
+      }" (click)="applyFilter('limit', limit, 'limit')">
+      {{ limit.display }}
+      </button>
+    </div>
     <h3 class="subtitle">Launch Year</h3>
     <div class="d-flex justify-content-between flex-wrap btn-wrapper">
       <button *ngFor="let year of years" class="btn btn-sm btn-success non-filter" [ngClass]="{
