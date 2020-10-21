@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'spacex-launch'`, () => {
+  it(`should have as title 'spaceX'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('spacex-launch');
+    expect(app.title).toEqual('spaceX');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title in a h2 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to spacex-launch!');
+    expect(compiled.querySelector('h2').textContent).toContain('SpaceX Launch Programs');
   });
 });

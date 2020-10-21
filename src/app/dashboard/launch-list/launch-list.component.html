@@ -1,33 +1,29 @@
-<div class="d-grid launch-item" *ngIf="launchList && launchList.length > 0">
-  <article
-    class="inner-launch-item m-xs p-sm margin-top-sm c-fit-width"
-    *ngFor="let launchItem of launchList"
-  >
-    <img src="{{ launchItem.links.mission_patch_small }}" alt="space-x-mission" loading="lazy" />
-    <h4 class="launch-title no-margin pt-xs c-fit-width">
-      {{ launchItem.mission_name }} #{{ launchItem.flight_number }}
-    </h4>
-    <h4 class="no-margin pt-xs c-fit-width">Mission Ids:</h4>
-    <li *ngFor="let id of launchItem.mission_id">{{ id }}</li>
-    <div class="d-flex c-fit-width">
-      <h4 class="no-margin pt-xs c-fit-width">Launch Year:</h4>
-      <p class="no-margin pt-xs pl-xs">
-        {{ launchItem.launch_year }}
-      </p>
-    </div>
-    <div class="d-flex c-fit-width">
-      <h4 class="no-margin pt-xs c-fit-width">Successful Launch:</h4>
-      <p class="no-margin pt-xs pl-xs">
-        {{ launchItem.launch_success }}
-      </p>
-    </div>
-    <div class="d-flex c-fit-width">
-      <h4 class="no-margin pt-xs c-fit-width">Successful Landing:</h4>
-      <p class="no-margin pt-xs pl-xs">
-        {{ launchItem.rocket.first_stage.cores[0].land_success }}
-      </p>
-    </div>
-  </article>
+<div class="form-row" *ngIf="launchList && launchList.length > 0">
+  <div *ngFor="let launchItem of launchList" class="col-12 col-xl-4 mb-3">
+      <div class="card h-100">
+          <div class="card-body p-3">
+              <div class="profile-wrap bg-light">
+                  <img class="img-fluid" src="{{ launchItem.links.mission_patch_small }}" alt="space-x-mission" loading="lazy">
+              </div>
+              <strong class="text-primary">{{ launchItem.mission_name }} #{{ launchItem.flight_number }}</strong>
+              <strong>Missions ids:</strong>
+              <ul class="list">
+                <li *ngFor="let id of launchItem.mission_id">{{ id }}</li>
+              </ul>
+              <div class="d-flex align-items-center mb-1">
+                  <strong class="mb-0 mr-3">Launch Year :</strong>
+                  <span class="text-primary font-size-sm">{{ launchItem.launch_year }}</span>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                  <strong class="mb-0 mr-3">Successful Launch :</strong>
+                  <span class="text-primary font-size-sm"> {{ launchItem.launch_success }}</span>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                  <strong class="mb-0 mr-3">Successful Landing :</strong>
+                  <span class="text-primary font-size-sm">{{ launchItem.rocket.first_stage.cores[0].land_success }}</span>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-
 

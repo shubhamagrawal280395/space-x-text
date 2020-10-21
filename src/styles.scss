@@ -1,48 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  background: #d3d3d3;
+/* Global Style */
+body{
+	line-height: 1.2;
+	font-family: 'Roboto', sans-serif;
 }
 
-.d-flex {
-  display: flex;
+h1{
+	font-size: 24px;
+	margin-bottom: 16px;
 }
 
-.d-grid {
-  display: grid;
+h2{
+	font-size: 18px;
 }
 
-.no-margin {
-  margin: 0;
+h3,h4{
+	font-size: 16px;
 }
 
-.m-xs {
-  margin: 0.5em;
+strong{
+	display: block;
+	font-weight: 600;
+	margin-bottom: 8px;
 }
 
-.ml-sm {
-  margin-left: 1em;
+.subtitle{
+	font-size: 16px;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #d5d1d3;
+	text-align: center;
+	margin: 16px;
 }
 
-.mt-xs {
-  margin-top: 0.5;
+ul{
+	padding-left: 16px;
+	margin-bottom: 8px;
 }
 
-.align-center {
-  text-align: center;
+.list li{
+	font-size: 14px;
 }
 
-.p-sm {
-  padding: 1em;
+/* button style */
+.btn{
+	min-width: 80px;
+}
+.btn-success{
+	color: #000;
+	border-color: #c5e09b;
+	background-color: #c5e09b;
 }
 
-.pt-xs {
-  padding-top: 0.5em;
+.btn-success:active,.btn-success:hover,.btn-success.active,
+.btn-success:focus,.btn-success:focus:active,
+.btn-success:active:focus,.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled):active:focus{
+	color: #000;
+	border-color: #7cba01;
+	background-color: #7cba01;
+	box-shadow: none;
 }
 
-.pl-xs {
-  padding-left: 0.5em;
+.btn-wrapper{
+	margin-left: -8px;
+	margin-right: 8px;
 }
 
-.c-fit-width {
-  width: fit-content;
+.btn-wrapper .btn{
+	margin: 0 8px 8px 8px;
+}
+
+/* fonts-size */
+.font-size-sm{
+	font-size: 14px;
+}
+
+.profile-wrap{
+	overflow: hidden;
+	height: 200px;
+	margin: 0 auto 16px;
+	border-radius: 4px;
+	padding: 16px;
+}
+.profile-wrap img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* Responsive Style */
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+
+}
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 1440px){
+	.container{
+		max-width: 1440px;
+	}
 }
