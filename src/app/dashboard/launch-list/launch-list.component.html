@@ -3,7 +3,7 @@
     class="inner-launch-item m-xs p-sm margin-top-sm c-fit-width"
     *ngFor="let launchItem of launchList"
   >
-    <img src="{{ launchItem.links.mission_patch_small }}" />
+    <img src="{{ launchItem.links.mission_patch_small }}" alt="space-x-mission" loading="lazy" />
     <h4 class="launch-title no-margin pt-xs c-fit-width">
       {{ launchItem.mission_name }} #{{ launchItem.flight_number }}
     </h4>

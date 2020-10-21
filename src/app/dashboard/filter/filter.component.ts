@@ -18,14 +18,13 @@ export class FilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.launchValues = this.format(LAUNCH,"launch_success", true)
-    this.landingValues = this.format(LANDING,"land_success", true)
-    this.years = this.format(YEARS,"launch_year")
+    this.launchValues = this.format(LAUNCH, true)
+    this.landingValues = this.format(LANDING, true)
+    this.years = this.format(YEARS)
   }
 
 
-  format(list,property, isBool = false) {
-    console.log("running format again",list,property,this.filters)
+  format(list, isBool = false) {
     return list.map(val => {
       return {
         value: isBool ? (val === 'Yes' ? "true" : "false") : val,
