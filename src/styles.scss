@@ -50,10 +50,17 @@ ul{
 	background-color: #c5e09b;
 }
 
-.btn-success:active,.btn-success:hover,.btn-success.active,
+.btn-success,
 .btn-success:focus,.btn-success:focus:active,
 .btn-success:active:focus,.btn-success:not(:disabled):not(.disabled):active,
-.btn-success:not(:disabled):not(.disabled):active:focus{
+.btn-success:not(:disabled):not(.disabled):active:focus,.btn-success:active,.btn-success:hover{
+	color: #000;
+	border-color: #c5e09b;
+	background-color: #c5e09b;
+	box-shadow: 0 0;
+}
+
+.btn-success.active{
 	color: #000;
 	border-color: #7cba01;
 	background-color: #7cba01;

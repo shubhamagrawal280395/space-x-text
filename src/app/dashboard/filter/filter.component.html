@@ -4,7 +4,7 @@
     <h3 class="subtitle">Launch Year</h3>
     <div class="d-flex justify-content-between flex-wrap btn-wrapper">
       <button *ngFor="let year of years" class="btn btn-sm btn-success" [ngClass]="{
-        'active': year.value == filters.launch_year
+        'applied-filter': year.value == filters.launch_year
       }" (click)="applyFilter('years', year, 'launch_year')">
       {{ year.display }}
       </button>
@@ -12,7 +12,7 @@
     <h3 class="subtitle">Successful Launch</h3>
     <div class="d-flex justify-content-between flex-wrap btn-wrapper">
       <button *ngFor="let launch of launchValues" class="btn btn-sm btn-success" [ngClass]="{
-          'active':launch.value == filters.launch_success
+          'applied-filter':launch.value == filters.launch_success
         }" (click)="applyFilter('launchValues', launch, 'launch_success')">
         {{ launch.display }}
       </button>
@@ -20,7 +20,7 @@
     <h3 class="subtitle">Successful Landing</h3>
     <div class="d-flex justify-content-between flex-wrap btn-wrapper">
       <button *ngFor="let landing of landingValues"class="btn btn-sm btn-success" [ngClass]="{
-        'active': landing.value == filters.land_success
+        'applied-filter': landing.value == filters.land_success
       }" (click)="applyFilter('landingValues', landing, 'land_success')">
       {{ landing.display }}
     </button>

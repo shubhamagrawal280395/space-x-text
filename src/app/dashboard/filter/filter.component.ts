@@ -36,7 +36,7 @@ export class FilterComponent implements OnInit {
 
 
   applyFilter(field: string, selectedProperty: any, propertyName: string) {
-    if (this.filters[propertyName] === selectedProperty.value) {
+    if (`${this.filters[propertyName]}` == `${selectedProperty.value}`) {
       delete this.filters[propertyName]
     }
     else {
