@@ -1,5 +1,5 @@
 <div class="d-grid launch-item" *ngIf="launchList && launchList.length > 0">
-  <div
+  <article
     class="inner-launch-item m-xs p-sm margin-top-sm c-fit-width"
     *ngFor="let launchItem of launchList"
   >
@@ -27,7 +27,7 @@
         {{ launchItem.rocket.first_stage.cores[0].land_success }}
       </p>
     </div>
-  </div>
+  </article>
 </div>
 
 
