@@ -8,13 +8,13 @@ import { Filters } from '../models/models';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
-  @Input() filters: Filters;
+  @Input() filters: Filters={};
   @Output() applyFilters = new EventEmitter();
 
-  years: Array<any>;
-  launchValues: Array<any>;
-  landingValues: Array<any>;
-  limits:Array<any>
+  years: Array<any>=[];
+  launchValues: Array<any>=[];
+  landingValues: Array<any>=[];
+  limits:Array<any>=[];
 
   constructor() { }
 
