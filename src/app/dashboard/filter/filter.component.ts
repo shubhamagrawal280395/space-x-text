@@ -19,17 +19,17 @@ export class FilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.launchValues = this.format(LAUNCH, true)
-    this.landingValues = this.format(LANDING, true)
+    this.launchValues = this.format(LAUNCH)
+    this.landingValues = this.format(LANDING)
     this.years = this.format(YEARS)
     this.limits = this.format(LIMITS)
   }
 
 
-  format(list, isBool = false) {
+  format(list) {
     return list.map(val => {
       return {
-        value: isBool ? (val === 'Yes' ? "true" : "false") : val,
+        value: `${val}`.toLowerCase(),
         display: val
       }
     })
