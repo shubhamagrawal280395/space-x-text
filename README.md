@@ -17,6 +17,9 @@ https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fpssp
 - The app is followed with server side rendering.
 - For fetching the data, simple http methods used with few required query parameters.
 - And the app targeted for mobile and desktop views.
+- Server Side Rendering is implimented
+- Images are lazy loaded
+- Have code coverage
 
 ## Development server
 

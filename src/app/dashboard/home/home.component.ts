@@ -47,6 +47,9 @@ export class HomeComponent implements OnInit {
   getLaunches() {
     this.dashboardService
       .getLaunches(this.filters)
-      .subscribe((data: LaunchDetails[]) => (this.launchList = data));
+      .subscribe((
+        data: LaunchDetails[]) => (this.launchList = data),
+        err=>console.log(err)
+      );
   }
 }
